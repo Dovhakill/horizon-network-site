@@ -25,7 +25,11 @@
 
     <section class="hero-bg text-white">
         <div class="container mx-auto px-6 py-24 md:py-32 text-center">
-            <img src="/logo-horizon-master.png" alt="Logo Horizon Network" class="mx-auto h-24 md:h-32 w-auto mb-6 bg-transparent">
+            <svg class="mx-auto h-24 md:h-32 w-auto mb-6 bg-transparent" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 40 H 50" stroke="#FFFFFF" stroke-width="4"/>
+                <path d="M10 40 A 20 20 0 0 1 50 40" stroke="#FFFFFF" stroke-width="4"/>
+                <text x="70" y="48" class="font-brand" font-size="40" font-weight="700" fill="#FFFFFF">HORIZON</text>
+            </svg>
             
             <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mt-4 font-brand">L'information. Réinventée.</h1>
             <p class="mt-6 text-lg max-w-2xl mx-auto text-gray-300">Nous vivons une époque paradoxale. Un accès infini à l'information, mais une ressource plus rare que jamais : la confiance.</p>
@@ -57,10 +61,71 @@
 
                 <a href="https://horizon-libre.net" target="_blank" class="card-hover block bg-white rounded-lg shadow-lg p-8 border-t-4 border-blue-600 fade-in">
                     <div class="flex items-center mb-4">
-                        <img src="/logo-horizon-libre.png" alt="Logo Horizon Libre" class="h-16 w-auto"/>
-                        <h3 class="ml-4 text-2xl font-bold font-brand">Horizon Libre</h3>
+                        <svg class="h-16 w-auto" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 40 H 50" stroke="#4B5563" stroke-width="4"/>
+                            <path d="M10 40 A 20 20 0 0 1 50 40" stroke="#2563EB" stroke-width="4"/>
+                            <text x="70" y="48" class="font-brand" font-size="40" font-weight="700" fill="#4B5563">HORIZON</text>
+                        </svg>
+                        <h3 class="ml-4 text-2xl font-bold font-brand">Libre</h3>
                     </div>
                     <p class="text-gray-600">L'actualité politique et sociale analysée de manière factuelle, sans biais idéologique.</p>
                 </a>
 
-                <a href="https://gregarious-kelpie-8f90c1.netlify
+                <a href="https://gregarious-kelpie-8f90c1.netlify.app/" target="_blank" class="card-hover block bg-white rounded-lg shadow-lg p-8 border-t-4 border-green-500 fade-in" style="transition-delay: 150ms;">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-16 w-auto" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 40 H 50" stroke="#4B5563" stroke-width="4"/>
+                            <path d="M10 40 A 20 20 0 0 1 50 40" stroke="#22C55E" stroke-width="4"/>
+                            <text x="70" y="48" class="font-brand" font-size="40" font-weight="700" fill="#4B5563">HORIZON</text>
+                        </svg>
+                        <h3 class="ml-4 text-2xl font-bold font-brand">Tech</h3>
+                    </div>
+                    <p class="text-gray-600">Décryptez la révolution de l'IA, du web et des technologies qui façonnent notre futur.</p>
+                </a>
+
+                <div class="card-hover bg-white rounded-lg shadow-lg p-8 border-t-4 border-cyan-500 opacity-60 fade-in" style="transition-delay: 300ms;">
+                     <div class="flex items-center mb-4">
+                        <svg class="h-16 w-auto" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 40 H 50" stroke="#4B5563" stroke-width="4"/>
+                            <path d="M10 40 A 20 20 0 0 1 50 40" stroke="#06B6D4" stroke-width="4"/>
+                            <text x="70" y="48" class="font-brand" font-size="40" font-weight="700" fill="#4B5563">HORIZON</text>
+                        </svg>
+                        <h3 class="ml-4 text-2xl font-bold font-brand">Science</h3>
+                    </div>
+                    <p class="text-gray-600">Les dernières découvertes scientifiques résumées et expliquées. (Bientôt)</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2025 Horizon Network. Construit avec une IA, pour la transparence.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="https://github.com/Dovhakill/aurore-ia" target="_blank" class="hover:text-white">GitHub</a>
+                <a href="https://x.com/MediaHorizonL" target="_blank" class="hover:text-white">X (Twitter)</a>
+                <a href="https://fr.tipeee.com/lhorizon-libre" target="_blank" class="hover:text-white">Soutenez le Réseau</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": { "popup": { "background": "#111827", "text": "#ffffff" }, "button": { "background": "#2563EB" } },
+      "theme": "classic", "position": "bottom-right",
+      "content": { "message": "Ce site utilise des cookies pour vous garantir la meilleure expérience.", "dismiss": "J'ai compris !", "link": "En savoir plus", "href": "https://www.google.com/policies/technologies/cookies/" }
+    })});
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+        });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach((el) => { observer.observe(el); });
+    </script>
+
+</body>
+</html>
