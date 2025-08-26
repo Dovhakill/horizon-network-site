@@ -12,86 +12,39 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         .font-brand { font-family: 'Space Grotesk', sans-serif; }
-        .hero-bg { background: linear-gradient(135deg, #1e3a8a 0%, #111827 100%); }
+        .hero-section { position: relative; overflow: hidden; }
+        #hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translateX(-50%) translateY(-50%);
+            background-size: cover;
+            filter: brightness(0.4); /* Assombrit la vidéo pour la lisibilité du texte */
+        }
+        .hero-overlay { z-index: 1; position: relative; }
         .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
         .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
     </style>
 </head>
 <body class="bg-gray-50">
 
-    <section class="hero-bg text-white">
-        <div class="container mx-auto px-6 py-16 md:py-20 text-center"> 
-            <img src="/logo-master.png" alt="Logo Horizon Network" class="mx-auto h-48 md:h-64 w-auto mb-6"> 
+    <section class="hero-section text-white">
+        <video autoplay loop muted playsinline id="hero-video">
+            <source src="https://cdn.coverr.co/videos/coverr-abstract-blue-spheres-2938/1080p.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+        </video>
+        
+        <div class="hero-overlay container mx-auto px-6 py-24 md:py-32 text-center">
+            <img src="/logo-master.png" alt="Logo Horizon Network" class="mx-auto h-48 md:h-64 w-auto mb-6">
             <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mt-4 font-brand">L'information. Réinventée.</h1>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6 text-center max-w-3xl">
-            <h2 class="text-4xl font-bold text-gray-900 font-brand">Notre Mission : Bâtir la Confiance</h2>
-            <div class="text-left text-lg text-gray-700 mt-8 space-y-6">
-                <p>Nous vivons une époque paradoxale. Un accès infini à l'information, mais une ressource plus rare que jamais : la **confiance**.</p>
-                <p>Le contrat de confiance est rompu. On suspecte un biais, une manipulation, un agenda caché derrière chaque mot. Nous pensons qu'il est inutile de tenter de réparer ce qui est cassé. Il faut construire quelque chose de nouveau.</p>
-                <p class="font-semibold text-gray-900">Horizon Network n'est pas un média de plus. C'est un nouvel écosystème. Notre produit n'est pas l'information, c'est la confiance certifiée, basée sur trois piliers :</p>
-                <ul class="list-disc list-inside space-y-3 pl-4">
-                    <li><strong class="text-gray-900">Transparence Radicale :</strong> Notre IA est 100% open-source. Ne nous croyez pas sur parole, vérifiez notre code.</li>
-                    <li><strong class="text-gray-900">Neutralité Algorithmique :</strong> Notre bot est programmé pour synthétiser des faits, pas pour avoir une opinion.</li>
-                    <li><strong class="text-gray-900">Scalabilité Instantanée :</strong> Notre "rédaction" est une IA. Lancer une nouvelle verticale nous prend quelques heures, pas des mois.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section id="verticales" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 font-brand">Notre Fédération de Médias</h2>
-                <p class="text-gray-600 mt-2">Chaque verticale est une porte d'entrée vers une information factuelle et neutre.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
-
-                <a href="https://horizon-libre.net" target="_blank" class="card-hover block bg-white rounded-lg shadow-lg p-8 border-t-4 border-blue-600">
-                    <img src="/logo-horizon-libre.png" alt="Logo Horizon Libre" class="h-16 w-auto mb-4"/>
-                    <h3 class="text-2xl font-bold font-brand text-gray-900">Horizon Libre</h3>
-                    <p class="text-gray-600 mt-2">L'actualité politique et sociale analysée de manière factuelle.</p>
-                </a>
-
-                <a href="https://gregarious-kelpie-8f90c1.netlify.app/" target="_blank" class="card-hover block bg-white rounded-lg shadow-lg p-8 border-t-4 border-green-500">
-                    <img src="/logo-horizon-tech.png" alt="Logo Horizon Tech" class="h-16 w-auto mb-4"/>
-                    <h3 class="text-2xl font-bold font-brand text-gray-900">Horizon Tech</h3>
-                    <p class="text-gray-600 mt-2">Décryptez la révolution de l'IA et des technologies qui façonnent notre futur.</p>
-                </a>
-
-                <div class="card-hover bg-white rounded-lg shadow-lg p-8 border-t-4 border-cyan-500 opacity-60">
-                    <img src="/logo-horizon-science.png" alt="Logo Horizon Science" class="h-16 w-auto mb-4"/>
-                    <h3 class="text-2xl font-bold font-brand text-gray-900">Horizon Science</h3>
-                    <p class="text-gray-600 mt-2">Les dernières découvertes scientifiques résumées. (Bientôt)</p>
-                </div>
-
-            </div>
+            <p class="mt-6 text-lg max-w-2xl mx-auto text-gray-200">Nous construisons le premier réseau de médias au monde piloté par une IA 100% open-source, parce que la confiance n'est pas une opinion, c'est une preuve.</p>
         </div>
     </section>
 
     <footer class="bg-black py-8">
-        <div class="container mx-auto px-6 text-center text-gray-500">
-            <p>&copy; 2025 Horizon Network. Construit avec une IA, pour la transparence.</p>
-            <div class="mt-4 flex justify-center space-x-6">
-                <a href="https://github.com/Dovhakill/aurore-ia" target="_blank" class="hover:text-white">GitHub</a>
-                <a href="https://x.com/MediaHorizonL" target="_blank" class="hover:text-white">X (Twitter)</a>
-                <a href="https://fr.tipeee.com/lhorizon-libre" target="_blank" class="hover:text-white">Soutenez le Réseau</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
-    <script>
-        window.addEventListener("load", function(){
-            window.cookieconsent.initialise({
-              "palette": { "popup": { "background": "#111827", "text": "#ffffff" }, "button": { "background": "#2563EB" } },
-              "theme": "classic", "position": "bottom-right",
-              "content": { "message": "Ce site utilise des cookies pour vous garantir la meilleure expérience.", "dismiss": "J'ai compris !", "link": "En savoir plus", "href": "https://www.google.com/policies/technologies/cookies/" }
-            })
-        });
-    </script>
-</body>
-</html>
+        <div class="container mx-auto px-6 text-center text-
