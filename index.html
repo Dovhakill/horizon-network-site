@@ -8,12 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .font-brand { font-family: 'Space Grotesk', sans-serif; }
-        .hero-bg { background-color: #111827; } /* Bleu nuit plus profond */
+        .hero-bg { background: linear-gradient(135deg, #1e3a8a 0%, #111827 100%); } /* Dégradé bleu nuit */
         .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -32,13 +37,13 @@
 
     <section id="verticales" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
+            <div class="text-center mb-16 fade-in">
                 <h2 class="text-4xl font-bold text-gray-900 font-brand">Notre Fédération de Médias</h2>
                 <p class="text-gray-600 mt-2">Chaque verticale est une porte d'entrée vers une information factuelle et neutre.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
 
-                <a href="https://horizon-libre.net" target="_blank" class="card-hover block bg-white rounded-lg shadow-lg p-8 border-t-4 border-blue-600">
+                <a href="https://horizon-libre.net" target="_blank" class="card-hover block bg-white rounded-lg shadow-lg p-8 border-t-4 border-blue-600 fade-in">
                     <div class="flex items-center mb-4">
                         <svg class="h-12 w-12" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 30 H 50" stroke="#4B5563" stroke-width="4"/><path d="M10 30 A 20 20 0 0 1 50 30" stroke="#2563EB" stroke-width="4"/></svg>
                         <h3 class="ml-4 text-2xl font-bold font-brand">Horizon Libre</h3>
@@ -46,7 +51,7 @@
                     <p class="text-gray-600">L'actualité politique et sociale analysée de manière factuelle, sans biais idéologique.</p>
                 </a>
 
-                <a href="https://gregarious-kelpie-8f90c1.netlify.app/" target="_blank" class="card-hover block bg-white rounded-lg shadow-lg p-8 border-t-4 border-green-500">
+                <a href="https://gregarious-kelpie-8f90c1.netlify.app/" target="_blank" class="card-hover block bg-white rounded-lg shadow-lg p-8 border-t-4 border-green-500 fade-in" style="transition-delay: 150ms;">
                     <div class="flex items-center mb-4">
                         <svg class="h-12 w-12" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 30 H 50" stroke="#4B5563" stroke-width="4"/><path d="M10 30 A 20 20 0 0 1 50 30" stroke="#22C55E" stroke-width="4"/></svg>
                         <h3 class="ml-4 text-2xl font-bold font-brand">Horizon Tech</h3>
@@ -54,7 +59,7 @@
                     <p class="text-gray-600">Décryptez la révolution de l'IA, du web et des technologies qui façonnent notre futur.</p>
                 </a>
 
-                <div class="card-hover bg-white rounded-lg shadow-lg p-8 border-t-4 border-cyan-500 opacity-60">
+                <div class="card-hover bg-white rounded-lg shadow-lg p-8 border-t-4 border-cyan-500 opacity-60 fade-in" style="transition-delay: 300ms;">
                      <div class="flex items-center mb-4">
                         <svg class="h-12 w-12" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 30 H 50" stroke="#4B5563" stroke-width="4"/><path d="M10 30 A 20 20 0 0 1 50 30" stroke="#06B6D4" stroke-width="4"/></svg>
                         <h3 class="ml-4 text-2xl font-bold font-brand">Horizon Science</h3>
@@ -67,7 +72,7 @@
     </section>
 
     <section class="py-20 bg-gray-800 text-white">
-        <div class="container mx-auto px-6 text-center max-w-3xl">
+        <div class="container mx-auto px-6 text-center max-w-3xl fade-in">
             <h2 class="text-3xl font-bold font-brand mb-4">Notre Contrat : La Transparence Radicale</h2>
             <p class="text-gray-300 mb-8">
                 Nous ne vous demandons pas de nous croire sur parole. Nous vous donnons les moyens de vérifier. L'intégralité de notre intelligence artificielle est open-source et accessible à tous sur GitHub.
@@ -88,6 +93,44 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#111827",
+          "text": "#ffffff"
+        },
+        "button": {
+          "background": "#2563EB"
+        }
+      },
+      "theme": "classic",
+      "position": "bottom-right",
+      "content": {
+        "message": "Ce site utilise des cookies pour vous garantir la meilleure expérience et pour afficher des publicités pertinentes.",
+        "dismiss": "J'ai compris !",
+        "link": "En savoir plus",
+        "href": "https://www.google.com/policies/technologies/cookies/" // Lien vers la politique de cookies de Google
+      }
+    })});
+    </script>
+    
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
 
 </body>
 </html>
