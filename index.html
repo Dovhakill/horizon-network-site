@@ -3,80 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horizon Network - L'information à l'ère de l'IA</title>
+    <title>Horizon Network - L'Information à l'Ère de l'IA</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .hero-bg { background-color: #1A1A1A; }
+        .font-brand { font-family: 'Space Grotesk', sans-serif; }
+        .hero-bg { background-color: #111827; } /* Bleu nuit plus profond */
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
     </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-50">
 
-    <section class="hero-bg text-white py-20 md:py-32">
-        <div class="container mx-auto px-6 text-center">
-            <svg class="mx-auto h-24 w-auto mb-6" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 40 H 50" stroke="#F5F5F5" stroke-width="4"/>
-                <path d="M10 40 A 20 20 0 0 1 50 40" stroke="#F5F5F5" stroke-width="4"/>
-                <text x="70" y="48" font-family="Inter, sans-serif" font-size="40" font-weight="800" fill="#F5F5F5">HORIZON</text>
+    <section class="hero-bg text-white">
+        <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+            <svg class="mx-auto h-20 w-auto mb-6" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 40 H 50" stroke="#FFFFFF" stroke-width="4"/>
+                <path d="M10 40 A 20 20 0 0 1 50 40" stroke="#FFFFFF" stroke-width="4"/>
+                <text x="70" y="48" class="font-brand" font-size="40" font-weight="700" fill="#FFFFFF">HORIZON</text>
             </svg>
-            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">L'information à l'ère de l'IA.</h1>
-            <p class="mt-4 text-lg text-gray-300">Radicale. Transparente. Scalable.</p>
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mt-4 font-brand">L'information. Réinventée.</h1>
+            <p class="mt-6 text-lg max-w-2xl mx-auto text-gray-300">Nous construisons le premier réseau de médias au monde piloté par une IA 100% open-source, parce que la confiance n'est pas une opinion, c'est une preuve.</p>
         </div>
     </section>
 
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-6 text-center max-w-3xl">
-            <h2 class="text-3xl font-bold text-gray-800 mb-4">Notre mission : reconstruire la confiance.</h2>
-            <p class="text-gray-600">
-                Dans un monde saturé d'opinions, nous avons choisi de bâtir un système. Horizon Network est le premier écosystème de médias piloté par une IA 100% open-source, car nous pensons que la confiance ne se décrète pas : elle se prouve, ligne de code après ligne de code.
-            </p>
-        </div>
-    </section>
-
-    <section class="py-16 bg-gray-100">
+    <section id="verticales" class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Découvrez notre fédération de médias</h2>
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 font-brand">Notre Fédération de Médias</h2>
+                <p class="text-gray-600 mt-2">Chaque verticale est une porte d'entrée vers une information factuelle et neutre.</p>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
 
-                <a href="https://horizon-libre.net" target="_blank" class="block bg-white rounded-lg shadow-lg p-8 transform hover:-translate-y-2 transition-transform duration-300">
-                    <div class="flex items-center mb-4">
-                        <svg class="h-12 w-12" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 30 H 50" stroke="#333" stroke-width="4"/><path d="M10 30 A 20 20 0 0 1 50 30" stroke="#0055FF" stroke-width="4"/></svg>
-                        <h3 class="ml-4 text-2xl font-bold">Horizon Libre</h3>
-                    </div>
-                    <p class="text-gray-600">L'actualité politique et sociale analysée de manière factuelle et neutre.</p>
-                </a>
-
-                <a href="https://LIEN-VERS-HORIZON.TECH" target="_blank" class="block bg-white rounded-lg shadow-lg p-8 transform hover:-translate-y-2 transition-transform duration-300">
-                    <div class="flex items-center mb-4">
-                        <svg class="h-12 w-12" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 30 H 50" stroke="#333" stroke-width="4"/><path d="M10 30 A 20 20 0 0 1 50 30" stroke="#00FF85" stroke-width="4"/></svg>
-                        <h3 class="ml-4 text-2xl font-bold">Horizon Tech</h3>
-                    </div>
-                    <p class="text-gray-600">Décryptez la révolution de l'IA, du web et des technologies qui façonnent notre futur.</p>
-                </a>
-
-                <div class="bg-white rounded-lg shadow-lg p-8 opacity-50 cursor-not-allowed">
-                     <div class="flex items-center mb-4">
-                        <svg class="h-12 w-12" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 30 H 50" stroke="#333" stroke-width="4"/><path d="M10 30 A 20 20 0 0 1 50 30" stroke="#00C2D1" stroke-width="4"/></svg>
-                        <h3 class="ml-4 text-2xl font-bold">Horizon Science</h3>
-                    </div>
-                    <p class="text-gray-600">Les dernières découvertes scientifiques résumées et expliquées. (Bientôt disponible)</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <footer class="hero-bg py-8">
-        <div class="container mx-auto px-6 text-center text-gray-400">
-            <p>&copy; 2025 Horizon Network. Construit avec une IA, pour la transparence.</p>
-            <div class="mt-4">
-                <a href="https://github.com/Dovhakill/aurore-ia" target="_blank" class="px-3 text-sm hover:text-white">Notre Code sur GitHub</a>
-                <a href="https://x.com/MediaHorizonL" target="_blank" class="px-3 text-sm hover:text-white">Suivez-nous sur X</a>
-                <a href="https://fr.tipeee.com/lhorizon-libre" target="_blank" class="px-3 text-sm hover:text-white">Soutenez le Réseau</a>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+                <a href="https://horizon-libre.net" target="_blank" class="card-hover block bg-white rounded-lg shadow
