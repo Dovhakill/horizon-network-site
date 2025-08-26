@@ -12,9 +12,9 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
     
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
         .font-brand { font-family: 'Space Grotesk', sans-serif; }
-        .hero-bg { background: linear-gradient(135deg, #1e3a8a 0%, #111827 100%); } /* Dégradé bleu nuit */
+        .hero-bg { background: linear-gradient(135deg, #1e3a8a 0%, #111827 100%); }
         .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
         .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
         .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
@@ -25,17 +25,29 @@
 
     <section class="hero-bg text-white">
         <div class="container mx-auto px-6 py-24 md:py-32 text-center">
-            <svg class="mx-auto h-20 w-auto mb-6" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 40 H 50" stroke="#FFFFFF" stroke-width="4"/>
-                <path d="M10 40 A 20 20 0 0 1 50 40" stroke="#FFFFFF" stroke-width="4"/>
-                <text x="70" y="48" class="font-brand" font-size="40" font-weight="700" fill="#FFFFFF">HORIZON</text>
-            </svg>
+            <img src="/logo-horizon-master.png" alt="Logo Horizon Network" class="mx-auto h-24 w-auto mb-6">
+            
             <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mt-4 font-brand">L'information. Réinventée.</h1>
-            <p class="mt-6 text-lg max-w-2xl mx-auto text-gray-300">Nous construisons le premier réseau de médias au monde piloté par une IA 100% open-source, parce que la confiance n'est pas une opinion, c'est une preuve.</p>
+            <p class="mt-6 text-lg max-w-2xl mx-auto text-gray-300">Nous vivons une époque paradoxale. Un accès infini à l'information, mais une ressource plus rare que jamais : la confiance.</p>
         </div>
     </section>
 
-    <section id="verticales" class="py-20 bg-white">
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center max-w-3xl">
+            <h2 class="text-4xl font-bold text-gray-900 font-brand fade-in">Notre mission : Bâtir la Confiance</h2>
+            <div class="text-left text-gray-600 mt-8 space-y-4 fade-in">
+                <p>Le contrat de confiance est rompu. On suspecte un biais, une manipulation, un agenda caché derrière chaque mot. Nous pensons qu'il est inutile de tenter de réparer ce qui est cassé. Il faut construire quelque chose de nouveau.</p>
+                <p class="font-semibold text-gray-800">Horizon Network n'est pas un média de plus. C'est un nouvel écosystème. Notre produit n'est pas l'information, c'est la confiance certifiée, basée sur trois piliers :</p>
+                <ul class="list-disc list-inside space-y-2 pl-4">
+                    <li><strong class="text-gray-900">Transparence Radicale :</strong> Notre IA est 100% open-source. Ne nous croyez pas sur parole, vérifiez notre code.</li>
+                    <li><strong class="text-gray-900">Neutralité Algorithmique :</strong> Notre bot est programmé pour synthétiser des faits, pas pour avoir une opinion.</li>
+                    <li><strong class="text-gray-900">Scalabilité Instantanée :</strong> Notre "rédaction" est une IA. Lancer une nouvelle verticale nous prend quelques heures, pas des mois.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="verticales" class="py-20 bg-gray-100">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-4xl font-bold text-gray-900 font-brand">Notre Fédération de Médias</h2>
@@ -45,7 +57,7 @@
 
                 <a href="https://horizon-libre.net" target="_blank" class="card-hover block bg-white rounded-lg shadow-lg p-8 border-t-4 border-blue-600 fade-in">
                     <div class="flex items-center mb-4">
-                        <svg class="h-12 w-12" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 30 H 50" stroke="#4B5563" stroke-width="4"/><path d="M10 30 A 20 20 0 0 1 50 30" stroke="#2563EB" stroke-width="4"/></svg>
+                        <img src="/logo-libre.png" alt="Logo Horizon Libre" class="h-12 w-auto"/>
                         <h3 class="ml-4 text-2xl font-bold font-brand">Horizon Libre</h3>
                     </div>
                     <p class="text-gray-600">L'actualité politique et sociale analysée de manière factuelle, sans biais idéologique.</p>
@@ -53,7 +65,7 @@
 
                 <a href="https://gregarious-kelpie-8f90c1.netlify.app/" target="_blank" class="card-hover block bg-white rounded-lg shadow-lg p-8 border-t-4 border-green-500 fade-in" style="transition-delay: 150ms;">
                     <div class="flex items-center mb-4">
-                        <svg class="h-12 w-12" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 30 H 50" stroke="#4B5563" stroke-width="4"/><path d="M10 30 A 20 20 0 0 1 50 30" stroke="#22C55E" stroke-width="4"/></svg>
+                        <img src="/logo-tech.png" alt="Logo Horizon Tech" class="h-12 w-auto"/>
                         <h3 class="ml-4 text-2xl font-bold font-brand">Horizon Tech</h3>
                     </div>
                     <p class="text-gray-600">Décryptez la révolution de l'IA, du web et des technologies qui façonnent notre futur.</p>
@@ -68,18 +80,6 @@
                 </div>
 
             </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-gray-800 text-white">
-        <div class="container mx-auto px-6 text-center max-w-3xl fade-in">
-            <h2 class="text-3xl font-bold font-brand mb-4">Notre Contrat : La Transparence Radicale</h2>
-            <p class="text-gray-300 mb-8">
-                Nous ne vous demandons pas de nous croire sur parole. Nous vous donnons les moyens de vérifier. L'intégralité de notre intelligence artificielle est open-source et accessible à tous sur GitHub.
-            </p>
-            <a href="https://github.com/Dovhakill/aurore-ia" target="_blank" class="bg-white text-gray-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-200 transition-colors duration-300">
-                Inspecter notre Code
-            </a>
         </div>
     </section>
 
@@ -98,38 +98,17 @@
     <script>
     window.addEventListener("load", function(){
     window.cookieconsent.initialise({
-      "palette": {
-        "popup": {
-          "background": "#111827",
-          "text": "#ffffff"
-        },
-        "button": {
-          "background": "#2563EB"
-        }
-      },
-      "theme": "classic",
-      "position": "bottom-right",
-      "content": {
-        "message": "Ce site utilise des cookies pour vous garantir la meilleure expérience et pour afficher des publicités pertinentes.",
-        "dismiss": "J'ai compris !",
-        "link": "En savoir plus",
-        "href": "https://www.google.com/policies/technologies/cookies/" // Lien vers la politique de cookies de Google
-      }
+      "palette": { "popup": { "background": "#111827", "text": "#ffffff" }, "button": { "background": "#2563EB" } },
+      "theme": "classic", "position": "bottom-right",
+      "content": { "message": "Ce site utilise des cookies pour vous garantir la meilleure expérience.", "dismiss": "J'ai compris !", "link": "En savoir plus", "href": "https://www.google.com/policies/technologies/cookies/" }
     })});
-    </script>
     
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.fade-in').forEach((el) => {
-            observer.observe(el);
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) { entry.target.classList.add('visible'); }
         });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach((el) => { observer.observe(el); });
     </script>
 
 </body>
